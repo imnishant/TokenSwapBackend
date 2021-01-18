@@ -19,7 +19,7 @@ export default class Common {
 }
 
 export function createFoldersIfDoesntExist() {
-  let dir = path.join(process.env.HOME, 'tezster', 'filesync');
+  let dir = path.join(process.env.HOME, 'nishant', 'filesync');
   if (process.dir) {
     dir = process.dir;
   } else {
