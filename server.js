@@ -6,8 +6,12 @@ import Logger from './app/Helpers/Logger';
 import Routes from './routes/routes';
 import { createFoldersIfDoesntExist } from './app/Helpers/Common';
 
+// MongoDB Config
+import models, { connectDb } from './Config/Databse/Models';
+
 require('dotenv').config();
 
+connectDb();
 const app = express();
 
 // security middleware
@@ -18,7 +22,16 @@ app.use(helmet());
 app.use(bodyParser.json({ limit: '2mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '1mb' }));
 
+// custom model initilization middelware
+app.use((req, res, next) => {
+  req.context = {
+    models,
+  };
+  next();
+});
+
 app.use('/api/health/', Routes.HealthApi);
+app.use('/api/verify/', Routes.VerifyApi);
 
 /**
  * uncaught exception handling

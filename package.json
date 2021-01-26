@@ -37,6 +37,7 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "rotating-file-stream": "^2.0.2",
+    "twilio": "^3.55.0",
     "web3": "^1.2.11",
     "winston": "^3.2.1"
   },

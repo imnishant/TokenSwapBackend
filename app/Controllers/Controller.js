@@ -113,8 +113,19 @@ export default class Contoller {
         break;
       case 'ForbiddenException':
         Logger.error('ForbiddenException: %s', error.message);
-
         this.response.status(403).json({
+          error: error.message,
+        });
+        break;
+      case 'TwilioVerifyError':
+        Logger.error('ForbiddenException: %s', error.message);
+        this.response.status(401).json({
+          error: error.message,
+        });
+        break;
+      case "UserExistException":
+        Logger.error("AuthyError: %s", error.message);
+        this.response.status(400).json({
           error: error.message,
         });
         break;
