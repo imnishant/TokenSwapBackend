@@ -209,3 +209,14 @@
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-26T16:00:51.885Z"}
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-26T16:00:56.234Z"}
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-26T16:01:06.790Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T16:45:08.066Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T16:46:35.663Z"}
+{"message":"Error message: User already exists with same phone number, please try again with different phone number!","level":"info","timestamp":"2021-01-27T16:46:59.263Z"}
+{"level":"error","message":"UserExistException: User already exists with same phone number, please try again with different phone number!","timestamp":"2021-01-27T16:46:59.263Z"}
+{"message":"Error message: User already exists with same email, please try again with different email!","level":"info","timestamp":"2021-01-27T16:47:17.595Z"}
+{"level":"error","message":"UserExistException: User already exists with same email, please try again with different email!","timestamp":"2021-01-27T16:47:17.596Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:01:50.923Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:02:03.635Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:04:10.961Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:07:49.189Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:11:04.864Z"}

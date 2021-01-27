@@ -1,6 +1,7 @@
 import Controller from "./Controller";
 import Logger from "../Helpers/Logger";
 import VerifyModel from "./../Models/Verify"
+import { response } from "express";
 
 export default class VerifyController extends Controller {
   constructor(response) {
@@ -20,11 +21,32 @@ export default class VerifyController extends Controller {
         ...request.body,
         ...request.context
       };
-      const verifyPreRegModel = this.verifyModel.preRegistration(this.params);
-      verifyPreRegModel.then((response) => {
+      const futureObject = this.verifyModel.preRegistration(this.params);
+      futureObject.then(response => {
         console.log(response);
         this.sendResponse(response);
-      }).catch((error) => {
+      }).catch(error => {
+        Logger.info(`Error message: ${error.message}`);
+        this.handleException(error);
+      });
+    } catch (error) {
+      Logger.error(`Error message: ${error}`);
+      this.handleException(error);
+    }
+  }
+
+  verifyPreRegistration(request) {
+    try {
+      this.params = {
+        ...request.params,
+        ...request.body,
+        ...request.context
+      };
+      const futureObject = this.verifyModel.verifyPreRegistration(this.params);
+      futureObject.then(response => {
+        console.log(response);
+        this.sendResponse(response);
+      }).catch(error => {
         Logger.info(`Error message: ${error.message}`);
         this.handleException(error);
       });
