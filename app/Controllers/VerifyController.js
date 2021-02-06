@@ -55,4 +55,26 @@ export default class VerifyController extends Controller {
       this.handleException(error);
     }
   }
+
+  register(request) {
+    try {
+      this.params = {
+        ...request.params,
+        ...request.body,
+        ...request.context
+      };
+      const futureObject = this.verifyModel.register(this.params);
+      futureObject.then(response => {
+        console.log(response);
+        this.sendResponse(response);
+      }).catch(error => {
+        Logger.error(`Error message: ${error}`);
+        this.handleException(error);
+      });
+    } catch (error) {
+      Logger.error(`Error message: ${error}`);
+      this.handleException(error);
+    }
+  }
+
 }

@@ -111,6 +111,12 @@ export default class Contoller {
           error: error.message,
         });
         break;
+      case '"DBException"':
+        Logger.error('"DBException": %s', error.message);
+        this.response.status(422).json({
+          error: error.message,
+        });
+        break;
       case 'ForbiddenException':
         Logger.error('ForbiddenException: %s', error.message);
         this.response.status(403).json({
