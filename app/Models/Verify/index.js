@@ -154,6 +154,7 @@ export default class VerifyModel {
                     email: args.email,
                     password: args.password,
                     full_name :args.full_name,
+                    phone_number: user.phone_number,
                     wallet_address_counter: i,
                     wallet_address: wallet_address
                   });
@@ -200,6 +201,81 @@ export default class VerifyModel {
         });
       });
     } catch(error) {
+      return error;
+    }
+  }
+
+  async login(args) {
+    try {
+      return new Promise((resolve, reject) => {
+        User.findOne({
+          email: args.email
+        }).exec((error, user) => {
+          if (error) {
+            reject({
+              message: "DB Exception. Issue in connecting to DB.",
+              name: "DBException"
+            });
+            return;
+          }
+          if (user) {
+            if (user.password == args.password) {
+              client.verify.services(process.env.VERIFY_SERVICE_ID).verifications.create({
+                to: "" + user.phone_number,
+                channel: "sms"
+              }).then(verification => {
+                if (verification.status === "pending") {
+                  resolve({
+                    message: "Please check your mobile for OTP!",
+                    phone_number: user.phone_number,
+                    twilio_verify_details: verification
+                  });
+                  return;
+                }
+              });
+            } else {
+              reject({
+                message: "Incorrect password, please check once and try again!",
+                name: "ValidationException"
+              });
+              return;
+            }
+          } else {
+            reject({
+              message: "User doesn't exist, please check your email and try again!",
+              name: "NotFoundException"
+            });
+            return;
+          }
+        });
+      });
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async verifyLogin(args) {
+    try {
+      return new Promise((resolve, reject) => {
+        client.verify.services(process.env.VERIFY_SERVICE_ID).verificationChecks.create({
+          to: args.phone_number,
+          code: args.otp
+        }).then(verification => {
+          if (verification.status === "approved") {
+            resolve({
+              message: "Verification Successfull!",
+              phone_number: args.phone_number
+            });
+            return;
+          }
+          reject({
+            message: "Incorrect OTP, please try again.",
+            name: "InvalidOTP"
+          });
+          return;
+        });
+      });
+    } catch (error) {
       return error;
     }
   }

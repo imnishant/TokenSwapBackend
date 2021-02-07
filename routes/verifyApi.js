@@ -18,4 +18,14 @@ TwilioVerifyAPIRouter.post("/v1/register", (request, response) => {
   verifyController.register(request);
 })
 
+TwilioVerifyAPIRouter.post("/v1/login", (request, response) => {
+  const verifyController = new VerifyController(response);
+  verifyController.login(request);
+})
+
+TwilioVerifyAPIRouter.post("/v1/verifyLogin", (request, response) => {
+  const verifyController = new VerifyController(response);
+  verifyController.verifyLogin(request);
+})
+
 export default TwilioVerifyAPIRouter;
