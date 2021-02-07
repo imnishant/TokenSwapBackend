@@ -149,8 +149,8 @@ export default class VerifyModel {
                   }
                   let i = parseInt(data.toString());
                   const wallet = EthHdWallet.fromMnemonic(process.env.MNEMONIC);
-                  const wallet_address = EthHdWallet.generateAddresses(i).slice(-1)[0];
-                  new_user = new User({
+                  const wallet_address = wallet.generateAddresses(i).slice(-1)[0];
+                  let new_user = new User({
                     email: args.email,
                     password: args.password,
                     full_name :args.full_name,

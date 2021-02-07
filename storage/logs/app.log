@@ -220,3 +220,34 @@
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:04:10.961Z"}
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:07:49.189Z"}
 {"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-01-27T17:11:04.864Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-06T18:18:40.517Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T06:21:11.204Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T06:23:41.579Z"}
+{"level":"error","message":"uncaughtException TypeError: EthHdWallet.generateAddresses is not a function","stack":"Error: TypeError: EthHdWallet.generateAddresses is not a function\n    at process.<anonymous> (/Users/theexplorer/Desktop/TokenSwapBackend/server.js:40:37)\n    at process.emit (events.js:203:15)\n    at process.EventEmitter.emit (domain.js:448:20)\n    at process._fatalException (internal/bootstrap/node.js:497:27)","timestamp":"2021-02-07T09:22:27.727Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T09:51:57.671Z"}
+{"level":"error","message":"uncaughtException ReferenceError: new_user is not defined","stack":"Error: ReferenceError: new_user is not defined\n    at process.<anonymous> (/Users/theexplorer/Desktop/TokenSwapBackend/server.js:40:37)\n    at process.emit (events.js:203:15)\n    at process.EventEmitter.emit (domain.js:448:20)\n    at process._fatalException (internal/bootstrap/node.js:497:27)","timestamp":"2021-02-07T09:52:05.395Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T09:54:15.796Z"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T09:54:19.919Z"}
+{"level":"error","timestamp":"2021-02-07T09:54:19.920Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T09:54:40.046Z"}
+{"level":"error","timestamp":"2021-02-07T09:54:40.047Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:44:20.764Z"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T10:44:26.477Z"}
+{"level":"error","timestamp":"2021-02-07T10:44:26.478Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:45:48.176Z"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T10:45:51.020Z"}
+{"level":"error","timestamp":"2021-02-07T10:45:51.020Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:46:48.717Z"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T10:46:51.619Z"}
+{"level":"error","timestamp":"2021-02-07T10:46:51.620Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:47:15.086Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:47:32.783Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:47:45.960Z"}
+{"message":"Error message: [object Object]","level":"error","timestamp":"2021-02-07T10:47:50.389Z"}
+{"level":"error","timestamp":"2021-02-07T10:47:50.390Z","message":"[object Object]","stack":"Error: [object Object]\n    at VerifyController.handleException (/Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/Controller.js:151:22)\n    at /Users/theexplorer/Desktop/TokenSwapBackend/app/Controllers/VerifyController.js:72:14\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:48:29.377Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:48:42.488Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:49:30.906Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:49:49.883Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:50:04.157Z"}
+{"message":"Server started successfully on port 5000","level":"info","timestamp":"2021-02-07T10:50:18.190Z"}
