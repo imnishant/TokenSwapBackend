@@ -1,4 +1,4 @@
 /node_modules
-/storage/logs
-/.env
+storage/logs
+.env
 /package-lock.json
