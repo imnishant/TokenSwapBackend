@@ -123,6 +123,12 @@ export default class Contoller {
           error: error.message,
         });
         break;
+      case 'IncorrectParameters':
+        Logger.error('IncorrectParameters: %s', error.message);
+        this.response.status(403).json({
+          error: error.message,
+        });
+        break;
       case 'TwilioVerifyError':
         Logger.error('TwilioVerifyError: %s', error.message);
         this.response.status(401).json({
