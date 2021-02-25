@@ -7,11 +7,12 @@ This project allows to swap ETH with BCD and vice-versa (WIP). Users first have 
 Below are the APIs currently being supported by the project. Postman Collection: https://www.getpostman.com/collections/078806e4b8fa338aa3aa
 1. Register (3 Steps)
 2. Login (2 Steps)
+3. Get Ether Balance
 
 ## Upcoming APIs
 
 Below are the APIs that will be supported soon.
-1. Check ETH Balance
+1. Get Wallet Address
 2. Check BCD Balance
 3. Swap ETH with BCD
 4. Swap BCD with ETH
