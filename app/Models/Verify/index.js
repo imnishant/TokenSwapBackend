@@ -2,6 +2,7 @@ const fs = require("fs");
 const { EthHdWallet } = require('eth-hd-wallet');
 import models from "./../../../Config/Databse/Models";
 import { request } from "express";
+import { resolve } from "path";
 
 const { User, TwilioVerifyUser } = models;
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
@@ -193,7 +194,8 @@ export default class VerifyModel {
                       });
                       resolve({
                         message: "User successfully registered!",
-                        details: new_user
+                        details: new_user,
+                        wallet_address: wallet_address
                       });
                       return;
                     });

@@ -32,6 +32,7 @@ app.use((req, res, next) => {
 
 app.use('/api/health/', Routes.HealthApi);
 app.use('/api/verify/', Routes.VerifyApi);
+app.use('/api/transaction', Routes.TransactionApi);
 
 /**
  * uncaught exception handling
