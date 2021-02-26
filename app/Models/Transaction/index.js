@@ -61,7 +61,7 @@ export default class TransactionModel {
         }
       });
     } catch (error) {
-    
+      return error;
     }
   }
 }

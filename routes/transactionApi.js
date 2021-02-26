@@ -1,11 +1,11 @@
 import express, { request, response } from "express";
 import TransactionController from "../app/Controllers/TransactionController";
 
-const TwilioTransactionAPIRouter = express.Router();
+const TransactionAPIRouter = express.Router();
 
-TwilioTransactionAPIRouter.get("/v1/getEtherBalance/", (request, response) => {
+TransactionAPIRouter.get("/v1/getEtherBalance/", (request, response) => {
   const transactionController = new TransactionController(response);
   transactionController.getEtherBalance(request);
 });
 
-export default TwilioTransactionAPIRouter;
+export default TransactionAPIRouter;
