@@ -40,7 +40,7 @@ export default class TransactionModel {
                 var ETH = ETH_Wei.div(decimals);
                 ETH = ETH.toFixed(18);
                 resolve({
-                  ethereum_address: args.address,
+                  wallet_address: args.address,
                   ethereum_balance: ETH
                 });
                 return;
@@ -64,4 +64,46 @@ export default class TransactionModel {
       return error;
     }
   }
+
+  // async getBCDBalance(args) {
+  //   try {
+  //     return new Promise((resolve, reject) => {
+  //       if (args.address) {
+  //         User.findOne({
+  //           wallet_address: args.address
+  //         }).exec((error, user) => {
+  //           if (error) {
+  //             reject({
+  //               message: "DB Exception. Issue in connecting to DB.",
+  //               name: "DBException"
+  //             });
+  //             return;
+  //           }
+  //           if (user) {
+              
+  //               resolve({
+  //                 wallet_address: args.address,
+  //                 ethereum_balance: ETH
+  //               });
+  //               return;
+  //             });
+  //           } else {
+  //             reject({
+  //               message: "Address not found, please check and try again.",
+  //               name: "NotFoundException"
+  //             });
+  //             return;
+  //           }
+  //         });
+  //       } else {
+  //         reject({
+  //           message: "Incorrect parameter. Expected parameters: { address }",
+  //           name: "IncorrectParameters"
+  //         });
+  //       }
+  //     });
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // }
 }

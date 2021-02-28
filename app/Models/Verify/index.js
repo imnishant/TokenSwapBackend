@@ -93,22 +93,40 @@ export default class VerifyModel {
     try {
       return new Promise((resolve, reject) => {
         if (args.phone_number && args.otp) {
-          client.verify.services(process.env.VERIFY_SERVICE_ID).verificationChecks.create({
-            to: args.phone_number,
-            code: args.otp
-          }).then(verification => {
-            if (verification.status === "approved") {
-              resolve({
-                message: "Verification Successfull!",
-                phone_number: args.phone_number
+          TwilioVerifyUser.findOne({
+            phone_number: args.phone_number
+          }).exec((err, user) => {
+            if (err) {
+              reject({
+                message: "DB Exception. Issue in connecting to DB.",
+                name: "DBException"
               });
               return;
             }
-            reject({
-              message: "Incorrect OTP, please try again.",
-              name: "InvalidOTP"
-            });
-            return;
+            if (user) {
+              client.verify.services(process.env.VERIFY_SERVICE_ID).verificationChecks.create({
+                to: args.phone_number,
+                code: args.otp
+              }).then(verification => {
+                if (verification.status === "approved") {
+                  resolve({
+                    message: "Verification Successfull!",
+                    phone_number: args.phone_number
+                  });
+                  return;
+                }
+                reject({
+                  message: "Incorrect OTP, please try again.",
+                  name: "InvalidOTP"
+                });
+                return;
+              });
+            } else {
+              reject({
+                message: "Please complete step-1 of Registration first and then try again.",
+                name: "TwilioVerifyError"
+              });
+            }
           });
         } else {
           reject({
