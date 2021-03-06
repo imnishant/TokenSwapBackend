@@ -8,4 +8,9 @@ TransactionAPIRouter.get("/v1/getEtherBalance/", (request, response) => {
   transactionController.getEtherBalance(request);
 });
 
+TransactionAPIRouter.get("/v1/getBCDBalance/", (request, response) => {
+  const transactionController = new TransactionController(response);
+  transactionController.getBCDBalance(request);
+});
+
 export default TransactionAPIRouter;

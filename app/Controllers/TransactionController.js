@@ -28,4 +28,25 @@ export default class TransactionController extends Controller {
       this.handleException(error);
     }
   }
+
+  getBCDBalance(request) {
+    try {
+      this.params = {
+        ...request.params,
+        ...request.body,
+        ...request.context
+      };
+      const futureObject = this.transactionModel.getBCDBalance(this.params);
+      futureObject.then(response => {
+        console.log(response);
+        this.sendResponse(response);
+      }).catch(error => {
+        Logger.info(`Error message: ${error.message}`);
+        this.handleException(error);
+      });
+    } catch (error) {
+      Logger.error(`Error message: ${error}`);
+      this.handleException(error);
+    }
+  }
 }
